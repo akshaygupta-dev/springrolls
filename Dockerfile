@@ -9,6 +9,7 @@ RUN apt-get -y update && \
  apt-get -y install maven
 
 # clone the code from repository
-RUN git clone https://github.com/akshaygupta-dev/springrolls.git
+RUN git clone https://github.com/akshaygupta-dev/springrolls.git && \
+ cd springrolls && mvn package
 
 CMD cd springrolls && mvn spring-boot:run
