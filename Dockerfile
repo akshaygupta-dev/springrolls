@@ -11,7 +11,4 @@ RUN apt-get -y update && \
 # clone the code from repository
 RUN mkdir -p /usr/share && git clone https://github.com/akshaygupta-dev/springrolls.git
 
-# install the required library
-RUN cd /usr/share/springrolls && mvn package
-
-CMD cd /usr/share/nginx/html/springrolls && mvn spring-boot:run
+CMD cd springrolls && mvn spring-boot:run
